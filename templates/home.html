@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Transfer Calculator</title>
+    <!-- BOOTSTRAP 4 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Barra -->
+    <nav class="navbar navbar-dark bg-dark">
+        <h1 class="display-5">EXAMEN DESARROLLO IV</h1>
+        <ul class="nav justify-content-end">
+        </ul>
+        <li class="nav-item">
+            <a class="nav-link" href="/gb">GB</a>
+        </li>
+    </nav>
+
+    <!-- TITULO -->
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4"> ✨ CALCULATOR MB✨ </h1>
+            <br>
+            <form action="" method="post">
+                <input type="text" placeholder="tamaño del archivo" name="tamaño" value="{{ request.form.tamaño }}">
+                <input type="text" placeholder="duración" name="duración" value="{{ request.form.duración }}">
+                <input type="text" placeholder="velocidad" name="velocidad" value="{{ request.form.velocidad }}">
+                <br>
+                <br>
+                <input class="btn btn-secondary" type="submit" value="Calcular velocidad" name="calcular">
+                <input class="btn btn-secondary" type="submit" value="Calcular duración" name="calcular">
+                <input class="btn btn-secondary" type="submit" value="Calcular tamaño" name="calcular">
+            </form>
+            <br> {% if resultado %}
+            <p class="error"><strong>Resultado:</strong> {{ resultado }}</p>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</body>
+
+</html>
